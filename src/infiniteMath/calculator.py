@@ -10,6 +10,7 @@ class Compare(Enum):
 Calculator which can operate with strings and so is not restricted by length of the numbers.
 """
 # TODO: Implement for decimal numbers (with point) and negative numbers.
+# TODO: 5 + 5 => 01, probably we need to convert ascii number to number value
 class Calculator:
 
     def add(self, a: str, b: str):
@@ -66,10 +67,11 @@ class Calculator:
     def multiply(self, a: str, b: str):
         result = "0"
         counter = "0"
+        one = "1"
         while(self.compare(counter, a) == Compare.LOWER):
             result = self.add(result, b)
+            counter = self.add(counter, one)
         return result
-        
 
     # Divide by euklides algorithem. 
     def divide(self, a: str, b: str) -> str:

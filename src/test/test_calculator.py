@@ -1,5 +1,4 @@
 import unittest
-# from ..infiniteMath.calculator import Calculator
 import infiniteMath.calculator
 
 class CalculatorTest(unittest.TestCase):
